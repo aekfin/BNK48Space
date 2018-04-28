@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'BNK48Space using Nuxtjs based on Vuejs serve and database by Firebase. by Firebase' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', href: 'https://fonts.googleapis.com/css?family=Mitr' }
     ]
   },
   css: [
@@ -19,8 +20,7 @@ module.exports = {
   modules: [
   ],
   plugins: [
-    '@/plugins/element-ui',
-    '@/plugins/firebase'
+    '@/plugins/element-ui'
   ],
   /*
   ** Customize the progress bar color

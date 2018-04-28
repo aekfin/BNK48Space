@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+require("firebase/firestore")
 
 if (!firebase.apps.length) {
   var config = {
@@ -11,3 +12,6 @@ if (!firebase.apps.length) {
   }
   firebase.initializeApp(config)
 }
+
+export default firebase
+

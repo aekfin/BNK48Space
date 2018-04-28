@@ -30,7 +30,6 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Mitr');
 
 body {
   font-family: 'Mitr', sans-serif !important;

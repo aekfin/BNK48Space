@@ -14,11 +14,19 @@
 </template>
 
 <script>
+  import * as firebase from 'firebase'
   export default {
     data () {
       return {
         input: ''
       }
+    },
+    mounted () {
+      this.$store.getters.firestore.collection('user').get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc)
+        })
+      })
     }
   }
 </script>
