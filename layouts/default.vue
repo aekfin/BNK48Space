@@ -3,11 +3,12 @@
   <el-menu
       class="el-menu-demo"
       mode="horizontal"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b">
+      background-color="#EDE2A3"
+      text-color="#4F4822"
+      active-text-color="#2D2A1A">
       <el-menu-item index="1">BNK48 SPACE</el-menu-item>
-      <el-submenu index="2">
+      <el-menu-item index="2">รายรับ-รายจ่าย</el-menu-item>
+      <el-submenu index="3">
         <template slot="title">Workspace</template>
         <el-menu-item index="2-1">item one</el-menu-item>
         <el-menu-item index="2-2">item two</el-menu-item>
@@ -33,7 +34,7 @@
 
 body {
   font-family: 'Mitr', sans-serif !important;
-  background-color: #FFF275;
+  background-color: whitesmoke;
   margin: 0px;
 }
 </style>
