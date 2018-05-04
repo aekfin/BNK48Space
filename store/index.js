@@ -14,6 +14,15 @@ const store = () => {
         var firestore = firebase.firestore()
         firestore.settings({timestampsInSnapshots: true})
         return firestore
+      },
+      authGoogle () {
+        return new firebase.auth.GoogleAuthProvider()
+      },
+      authFacebook () {
+        return new firebase.auth.FacebookAuthProvider()
+      },
+      authGithub () {
+        return new firebase.auth.GithubAuthProvider()
       }
     },
     mutations: {

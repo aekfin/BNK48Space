@@ -56,7 +56,7 @@
     mounted () {
       this.$store.getters.firestore.collection('user').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          console.log(doc)
+          // console.log(doc)
         })
       })
     }
