@@ -15,6 +15,9 @@ const store = () => {
         firestore.settings({timestampsInSnapshots: true})
         return firestore
       },
+      storage () {
+        return firebase.storage().ref()
+      },
       authGoogle () {
         return new firebase.auth.GoogleAuthProvider()
       },

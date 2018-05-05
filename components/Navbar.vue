@@ -3,6 +3,7 @@
     <el-menu
         class="el-menu-demo"
         mode="horizontal"
+        :default-active="activeIndex"
         :background-color="backgroundColor"
         :text-color="textColor"
         :active-text-color="activeTextColor">
@@ -52,7 +53,8 @@ export default {
   },
   data () {
     return {
-      name: null
+      name: null,
+      activeIndex: '1'
     }
   }
 }
