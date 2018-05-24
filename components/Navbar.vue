@@ -7,8 +7,8 @@
         :background-color="backgroundColor"
         :text-color="textColor"
         :active-text-color="activeTextColor">
-        <el-menu-item index="1">BNK48 SPACE</el-menu-item>
-        <el-menu-item index="2">Income-Outcome</el-menu-item>
+        <el-menu-item index="1" @click="ChangeRoute('/')">BNK48 SPACE</el-menu-item>
+        <el-menu-item index="2" @click="ChangeRoute('/income')">Income Account</el-menu-item>
         <el-submenu index="3" v-if="!name" style="float: right;">
           <template slot="title">Sign In {{name}} </template>
           <el-menu-item index="3-1" @click="SignIn(0)"><img src="/google.ico" width="25px" /> Google</el-menu-item>
@@ -23,6 +23,9 @@
 <script>
 export default {
   props: ['backgroundColor', 'textColor', 'activeTextColor'],
+  mounted () {
+    this.activeIndex = String(this.routes.indexOf(this.$route.path) !== -1 ? this.routes.indexOf(this.$route.path) + 1 : 1)
+  },
   methods: {
     SignIn (mode) {
       const auth = [
@@ -49,12 +52,16 @@ export default {
         var credential = error.credential
         // ...
       })
+    },
+    ChangeRoute (path) {
+      this.$router.push(path)
     }
   },
   data () {
     return {
       name: null,
-      activeIndex: '1'
+      activeIndex: null,
+      routes: ['/', '/income']
     }
   }
 }
